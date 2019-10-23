@@ -1,1 +1,3 @@
 - npm install -g @angular/cli        ===============> install Angular cli globally in machine
+- ng new <project name>              ===============> to crearte angular cli project
+- ng serve                           ===============> to 'load/build' app in browser
