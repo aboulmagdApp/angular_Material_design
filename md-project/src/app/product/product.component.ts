@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
   productName = 'A Book';
   isDisabled = false;
+  products = ['A Book','A Tree'];
   constructor() { 
     setTimeout(() =>{
       this.productName = 'A Tree';
@@ -16,6 +17,9 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  onAddProduct(){
+    this.products.push(this.productName);
   }
 
 }
