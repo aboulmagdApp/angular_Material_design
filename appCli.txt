@@ -1,3 +1,5 @@
 - npm install -g @angular/cli        ===============> install Angular cli globally in machine
 - ng new <project name>              ===============> to crearte angular cli project
 - ng serve                           ===============> to 'load/build' app in browser
+- npm install --save @angular/material @angular/cdk =============> install Angular Material and angular cdk
+- npm install --save hammerjs        ===============> to install this for handel layout on mobile devices
