@@ -3,3 +3,4 @@
 - ng serve                           ===============> to 'load/build' app in browser
 - npm install --save @angular/material @angular/cdk =============> install Angular Material and angular cdk
 - npm install --save hammerjs        ===============> to install this for handel layout on mobile devices
+- npm install @angular/flex-layout @angular/cdk --save ===========> for angular material layout
