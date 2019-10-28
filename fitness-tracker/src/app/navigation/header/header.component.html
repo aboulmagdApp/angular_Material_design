@@ -1,4 +1,4 @@
-<mat-toolbar color="warn">
+<mat-toolbar color="warn" *ngIf="isAuth">
     <div fxHide.gt-xs>
         <button mat-icon-button (click)="onToggleSidenav()">
             <mat-icon>menu</mat-icon>
@@ -9,6 +9,7 @@
             <li *ngIf="!isAuth"><a routerLink="/signup">Signup</a></li>
             <li *ngIf="!isAuth"><a routerLink="/login">login</a></li>
             <li *ngIf="isAuth"><a routerLink="/training">training</a></li>
+            <li style="cursor: pointer;" (click)="onLogout()">logout</li>
         </ul>
     </div>
 </mat-toolbar>
