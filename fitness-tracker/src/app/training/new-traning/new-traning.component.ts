@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class NewTraningComponent implements OnInit {
   @Output() trainingStart = new EventEmitter<void>();
+  //create exercises empty array
   exercises: Exercise[] = [];
   constructor(private trainingService: TrainingService) { }
 

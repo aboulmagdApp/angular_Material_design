@@ -2,6 +2,8 @@ import {CanActivate,ActivatedRouteSnapshot,RouterStateSnapshot,Router}from '@ang
 import { AuthService } from './auth.service';
 import { Injectable } from '@angular/core';
 
+// when we implement canActivate we need to route : ActivatedRouteSnapshot and 
+                                        //  state : RouterStateSnapshot
 @Injectable()
 export class AuthGuard implements CanActivate {
 
@@ -9,7 +11,7 @@ export class AuthGuard implements CanActivate {
         private router: Router) {
     }
     canActivate(route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot) {
+                state: RouterStateSnapshot) {
         if (this.authService.isAuth()) {
             return true;
         } else {

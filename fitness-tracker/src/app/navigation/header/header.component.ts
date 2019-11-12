@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class HeaderComponent implements OnInit, OnDestroy {
   @Output() sidenavToggle = new EventEmitter<void>();
   isAuth = false;
+  // this variable to make us use unsubscribe for any observable
   authSubscription: Subscription;
 
   constructor(private authService: AuthService) { }
