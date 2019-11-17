@@ -5,3 +5,4 @@
 - npm install --save hammerjs        ===============> to install this for handel layout on mobile devices
 - npm install @angular/flex-layout @angular/cdk --save ===========> for angular material layout
 - npm install --save rxjs-compat    ===============> Install rxjs-compat
+- npm install angularfire2 firbase --save
