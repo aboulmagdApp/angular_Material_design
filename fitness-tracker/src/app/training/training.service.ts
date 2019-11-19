@@ -15,6 +15,7 @@ export class TrainingService {
     private availableExercises: Exercise[] = [];
 
     private runningExercies: Exercise;
+ 
     //Empty array
     private exercises: Exercise[] = [];
 
@@ -70,8 +71,12 @@ export class TrainingService {
     getRunningExercise() {
         return { ...this.runningExercies };
     }
-    getCompletedOrCancelledExercises() {
-        return this.exercises.slice();
+    fetchCompletedOrCancelledExercises() {
+        this.db.collection('finishedExercies')
+                .valueChanges()
+                .subscribe((rsult: Exercise[]) =>{
+                    this.finishedExercisesChanged.next(rsult);
+                });
     }
     private AddDataToDatabase(exercise: Exercise){
         this.db.collection('finishedExercies').add(exercise);
